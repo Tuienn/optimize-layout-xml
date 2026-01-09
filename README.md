@@ -50,14 +50,35 @@ So sánh sự khác biệt khi tái sử dụng layout:
   - Loại bỏ hoàn toàn wrapper views
   - Hiệu suất tốt hơn, tiết kiệm bộ nhớ
 
+### 3. Kiểm soát Overdraw (Loại bỏ Background thừa)
+
+So sánh hiệu suất rendering với overdraw:
+
+- **Có Overdraw**: Nhiều layer có background trùng lặp
+
+  - Layout file: `activity_overdraw_with.xml`
+  - Mọi layer đều có background màu trắng
+  - Overdraw level: 2-3x (pixel bị vẽ nhiều lần)
+  - Lãng phí tài nguyên GPU
+
+- **Không Overdraw**: Loại bỏ background thừa với `@null`
+  - Layout file: `activity_overdraw_without.xml`
+  - Chỉ giữ lại background cần thiết
+  - Container và label views dùng `android:background="@null"`
+  - Overdraw level: 0-1x (tối ưu)
+  - Hiệu suất rendering tốt hơn đáng kể
+
 ## Cách sử dụng
 
 1. Mở ứng dụng
 2. Chọn loại tối ưu hóa muốn xem:
    - **"Tối ưu hóa độ sâu"**: So sánh LinearLayout lồng nhau vs ConstraintLayout
    - **"Tối ưu Include/Merge"**: So sánh include thông thường vs include với merge
+   - **"Kiểm soát Overdraw"**: So sánh background trùng lặp vs loại bỏ background thừa
 3. Chọn **"Chưa tối ưu"** hoặc **"Tối ưu"** để xem sự khác biệt
-4. Sử dụng Android Studio Layout Inspector để xem chi tiết hierarchy
+4. Sử dụng các công cụ phân tích:
+   - **Layout Inspector**: Xem chi tiết hierarchy
+   - **Debug GPU Overdraw**: Settings → Developer Options → Debug GPU Overdraw → Show overdraw areas
 
 ## Mở rộng trong tương lai
 
@@ -67,6 +88,7 @@ Cấu trúc folder đã được thiết kế để dễ dàng thêm các loại
 optimizations/
 ├── hierarchy/        # ✅ Đã hoàn thành
 ├── merge/            # ✅ Đã hoàn thành
+├── overdraw/         # ✅ Đã hoàn thành
 ├── viewstub/         # 🔜 ViewStub lazy loading
 ├── recyclerview/     # 🔜 RecyclerView vs ListView
 └── databinding/      # 🔜 Data Binding vs findViewById

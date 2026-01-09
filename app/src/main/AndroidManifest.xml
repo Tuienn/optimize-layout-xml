@@ -56,6 +56,24 @@
             android:name=".optimizations.merge.WithMergeActivity"
             android:exported="false"
             android:label="@string/with_merge_layout" />
+        
+        <!-- Overdraw Selector Activity -->
+        <activity
+            android:name=".optimizations.overdraw.OverdrawSelectorActivity"
+            android:exported="false"
+            android:label="@string/overdraw_optimization" />
+        
+        <!-- With Overdraw Activity -->
+        <activity
+            android:name=".optimizations.overdraw.WithOverdrawActivity"
+            android:exported="false"
+            android:label="@string/with_overdraw_layout" />
+        
+        <!-- No Overdraw Activity -->
+        <activity
+            android:name=".optimizations.overdraw.NoOverdrawActivity"
+            android:exported="false"
+            android:label="@string/no_overdraw_layout" />
             
     </application>
 

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WITH OVERDRAW demonstration -->
+<!-- Multiple redundant white backgrounds cause overdraw (pixel painted multiple times) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <!-- Root Container - WHITE BACKGROUND (Overdraw!) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center">
+
+        <!-- Card Container - WHITE BACKGROUND (Overdraw!) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Form Title - WHITE BACKGROUND (Overdraw!) -->
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Full Name Label - WHITE BACKGROUND (Overdraw!) -->
+            <TextView
+                android:id="@+id/tvLabelFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_full_name"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Full Name Input - WHITE BACKGROUND (Overdraw!) -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_full_name"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Email Label - WHITE BACKGROUND (Overdraw!) -->
+            <TextView
+                android:id="@+id/tvLabelEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_email"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Email Input - WHITE BACKGROUND (Overdraw!) -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Phone Label - WHITE BACKGROUND (Overdraw!) -->
+            <TextView
+                android:id="@+id/tvLabelPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_phone"
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Phone Input - WHITE BACKGROUND (Overdraw!) -->
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Overdraw Warning Info -->
+            <TextView
+                android:id="@+id/tvOverdrawInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/with_overdraw_info"
+                android:textSize="12sp"
+                android:textColor="#F44336"
+                android:background="#FFEBEE"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_submit"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_primary"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
