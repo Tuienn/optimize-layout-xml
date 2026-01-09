@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WITHOUT <merge> tag demonstration -->
+<!-- Hierarchy depth: 2 levels (Root + 3 wrapper LinearLayouts) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Form Title -->
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/merge_form_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Include Field 1 - Creates extra LinearLayout wrapper -->
+            <include layout="@layout/reuse_layout_without_merge" />
+
+            <!-- Include Field 2 - Creates extra LinearLayout wrapper -->
+            <include layout="@layout/reuse_layout_without_merge" />
+
+            <!-- Include Field 3 - Creates extra LinearLayout wrapper -->
+            <include layout="@layout/reuse_layout_without_merge" />
+
+            <!-- Info Text -->
+            <TextView
+                android:id="@+id/tvHierarchyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/without_merge_info"
+                android:textSize="12sp"
+                android:textColor="#F44336"
+                android:background="#FFEBEE"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_submit"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_primary"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

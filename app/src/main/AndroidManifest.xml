@@ -38,6 +38,24 @@
             android:name=".optimizations.hierarchy.OptimizedActivity"
             android:exported="false"
             android:label="@string/optimized_layout" />
+        
+        <!-- Merge Selector Activity -->
+        <activity
+            android:name=".optimizations.merge.MergeSelectorActivity"
+            android:exported="false"
+            android:label="@string/merge_optimization" />
+        
+        <!-- Without Merge Activity -->
+        <activity
+            android:name=".optimizations.merge.WithoutMergeActivity"
+            android:exported="false"
+            android:label="@string/without_merge_layout" />
+        
+        <!-- With Merge Activity -->
+        <activity
+            android:name=".optimizations.merge.WithMergeActivity"
+            android:exported="false"
+            android:label="@string/with_merge_layout" />
             
     </application>
 

@@ -5,6 +5,7 @@
     <string name="main_title">Tối ưu hóa Layout XML</string>
     <string name="main_subtitle">Demo các kỹ thuật tối ưu hóa layout trong Android</string>
     <string name="btn_hierarchy_optimization">Tối ưu hóa độ sâu</string>
+    <string name="btn_merge_optimization">Tối ưu Include/Merge</string>
     
     <!-- Hierarchy Optimization -->
     <string name="hierarchy_optimization">Tối ưu hóa độ sâu Hierarchy</string>
@@ -12,16 +13,26 @@
     <string name="btn_unoptimized">Chưa tối ưu</string>
     <string name="btn_optimized">Tối ưu</string>
     
+    <!-- Merge Optimization -->
+    <string name="merge_optimization">Tối ưu Include/Merge</string>
+    <string name="merge_description">So sánh include thông thường vs include với thẻ merge</string>
+    <string name="btn_without_merge">Không dùng Merge</string>
+    <string name="btn_with_merge">Dùng Merge</string>
+    
     <!-- Layout Labels -->
     <string name="unoptimized_layout">LinearLayout lồng nhau (5 cấp)</string>
     <string name="optimized_layout">ConstraintLayout (Flat)</string>
+    <string name="without_merge_layout">Include không dùng Merge</string>
+    <string name="with_merge_layout">Include dùng Merge</string>
     
     <!-- Form Fields -->
     <string name="form_title">Thông tin cá nhân</string>
+    <string name="merge_form_title">Thông tin cá nhân</string>
     <string name="label_full_name">Họ và tên</string>
     <string name="label_email">Email</string>
     <string name="label_phone">Số điện thoại</string>
     <string name="label_address">Địa chỉ</string>
+    <string name="label_field">Nhãn trường</string>
     <string name="btn_submit">Gửi thông tin</string>
     
     <!-- Placeholders -->
@@ -29,7 +40,12 @@
     <string name="hint_email">example@email.com</string>
     <string name="hint_phone">0123456789</string>
     <string name="hint_address">Nhập địa chỉ của bạn</string>
+    <string name="hint_field">Nhập dữ liệu</string>
     
     <!-- Messages -->
     <string name="toast_submit_success">Đã gửi thông tin thành công!</string>
+    
+    <!-- Hierarchy Info -->
+    <string name="without_merge_info">⚠️ Hierarchy depth: 2 levels\n3 wrapper LinearLayouts không cần thiết được tạo ra</string>
+    <string name="with_merge_info">✓ Hierarchy depth: 1 level (Flat)\nViews gắn trực tiếp vào parent, không có wrapper</string>
 </resources>

@@ -32,10 +32,30 @@ So sánh hiệu suất giữa:
   - Tất cả views là direct children của ConstraintLayout
   - Hiệu suất tốt hơn đáng kể
 
+### 2. Tái sử dụng Layout với Include/Merge
+
+So sánh sự khác biệt khi tái sử dụng layout:
+
+- **Không dùng Merge**: Include layout với root LinearLayout
+
+  - Layout file: `reuse_layout_without_merge.xml`
+  - Mỗi lần include tạo thêm 1 wrapper LinearLayout không cần thiết
+  - Hierarchy depth: 2 levels
+  - 3 wrapper views bị lãng phí
+
+- **Dùng Merge**: Include layout với root `<merge>`
+  - Layout file: `reuse_layout_with_merge.xml`
+  - Views được gắn trực tiếp vào parent container
+  - Hierarchy depth: 1 level (flat)
+  - Loại bỏ hoàn toàn wrapper views
+  - Hiệu suất tốt hơn, tiết kiệm bộ nhớ
+
 ## Cách sử dụng
 
 1. Mở ứng dụng
-2. Nhấn nút **"Tối ưu hóa độ sâu"**
+2. Chọn loại tối ưu hóa muốn xem:
+   - **"Tối ưu hóa độ sâu"**: So sánh LinearLayout lồng nhau vs ConstraintLayout
+   - **"Tối ưu Include/Merge"**: So sánh include thông thường vs include với merge
 3. Chọn **"Chưa tối ưu"** hoặc **"Tối ưu"** để xem sự khác biệt
 4. Sử dụng Android Studio Layout Inspector để xem chi tiết hierarchy
 
@@ -46,9 +66,8 @@ Cấu trúc folder đã được thiết kế để dễ dàng thêm các loại
 ```
 optimizations/
 ├── hierarchy/        # ✅ Đã hoàn thành
+├── merge/            # ✅ Đã hoàn thành
 ├── viewstub/         # 🔜 ViewStub lazy loading
-├── merge/            # 🔜 Merge tag optimization
 ├── recyclerview/     # 🔜 RecyclerView vs ListView
 └── databinding/      # 🔜 Data Binding vs findViewById
-``
 ```
