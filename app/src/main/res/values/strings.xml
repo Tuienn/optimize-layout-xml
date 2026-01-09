@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Layout Optimization Demo</string>
+    
+    <!-- Main Activity -->
+    <string name="main_title">Tối ưu hóa Layout XML</string>
+    <string name="main_subtitle">Demo các kỹ thuật tối ưu hóa layout trong Android</string>
+    <string name="btn_hierarchy_optimization">Tối ưu hóa độ sâu</string>
+    
+    <!-- Hierarchy Optimization -->
+    <string name="hierarchy_optimization">Tối ưu hóa độ sâu Hierarchy</string>
+    <string name="hierarchy_description">So sánh LinearLayout lồng nhau vs ConstraintLayout</string>
+    <string name="btn_unoptimized">Chưa tối ưu</string>
+    <string name="btn_optimized">Tối ưu</string>
+    
+    <!-- Layout Labels -->
+    <string name="unoptimized_layout">LinearLayout lồng nhau (5 cấp)</string>
+    <string name="optimized_layout">ConstraintLayout (Flat)</string>
+    
+    <!-- Form Fields -->
+    <string name="form_title">Thông tin cá nhân</string>
+    <string name="label_full_name">Họ và tên</string>
+    <string name="label_email">Email</string>
+    <string name="label_phone">Số điện thoại</string>
+    <string name="label_address">Địa chỉ</string>
+    <string name="btn_submit">Gửi thông tin</string>
+    
+    <!-- Placeholders -->
+    <string name="hint_full_name">Nhập họ và tên</string>
+    <string name="hint_email">example@email.com</string>
+    <string name="hint_phone">0123456789</string>
+    <string name="hint_address">Nhập địa chỉ của bạn</string>
+    
+    <!-- Messages -->
+    <string name="toast_submit_success">Đã gửi thông tin thành công!</string>
+</resources>
