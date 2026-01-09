@@ -61,7 +61,7 @@ So sánh hiệu suất rendering với overdraw:
   - Overdraw level: 2-3x (pixel bị vẽ nhiều lần)
   - Lãng phí tài nguyên GPU
 
-- **Không Overdraw**: Loại bỏ background thừa với `@null`
+- **Hạn chế Overdraw**: Loại bỏ background thừa với `@null`
   - Layout file: `activity_overdraw_without.xml`
   - Chỉ giữ lại background cần thiết
   - Container và label views dùng `android:background="@null"`
@@ -75,7 +75,7 @@ So sánh hiệu suất với danh sách lớn:
 - **Không tối ưu**: Tạo View thủ công cho mỗi item
 
   - Layout file: `activity_recyclerview_unoptimized.xml`
-  - ScrollView + LinearLayout + addView() cho 100 items
+  - ScrollView + LinearLayout + addView() cho 1000 items
   - Tất cả views được tạo và giữ trong bộ nhớ
   - findViewById() gọi lại cho mỗi item → chậm
   - Risk of OOM với danh sách dài
