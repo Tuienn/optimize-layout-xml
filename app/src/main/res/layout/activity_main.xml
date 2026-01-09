@@ -60,4 +60,15 @@
         android:padding="16dp"
         android:layout_marginBottom="16dp" />
 
+    <Button
+        android:id="@+id/btnRecyclerViewOptimization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_recyclerview_optimization"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_secondary"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
 </LinearLayout>

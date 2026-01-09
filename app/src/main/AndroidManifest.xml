@@ -74,6 +74,24 @@
             android:name=".optimizations.overdraw.NoOverdrawActivity"
             android:exported="false"
             android:label="@string/no_overdraw_layout" />
+        
+        <!-- RecyclerView Selector Activity -->
+        <activity
+            android:name=".optimizations.recyclerview.RecyclerViewSelectorActivity"
+            android:exported="false"
+            android:label="@string/recyclerview_optimization" />
+        
+        <!-- Unoptimized List Activity -->
+        <activity
+            android:name=".optimizations.recyclerview.UnoptimizedListActivity"
+            android:exported="false"
+            android:label="@string/unoptimized_list_layout" />
+        
+        <!-- Optimized RecyclerView Activity -->
+        <activity
+            android:name=".optimizations.recyclerview.OptimizedRecyclerViewActivity"
+            android:exported="false"
+            android:label="@string/optimized_recyclerview_layout" />
             
     </application>
 

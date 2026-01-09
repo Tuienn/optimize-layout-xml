@@ -7,6 +7,7 @@
     <string name="btn_hierarchy_optimization">Tối ưu hóa độ sâu</string>
     <string name="btn_merge_optimization">Tối ưu Include/Merge</string>
     <string name="btn_overdraw_optimization">Kiểm soát Overdraw</string>
+    <string name="btn_recyclerview_optimization">Tối ưu RecyclerView</string>
     
     <!-- Hierarchy Optimization -->
     <string name="hierarchy_optimization">Tối ưu hóa độ sâu Hierarchy</string>
@@ -26,6 +27,10 @@
     <string name="btn_with_overdraw">Có Overdraw</string>
     <string name="btn_no_overdraw">Không Overdraw</string>
     
+    <!-- RecyclerView Optimization -->
+    <string name="recyclerview_optimization">Tối ưu RecyclerView</string>
+    <string name="recyclerview_description">So sánh tạo View thủ công vs RecyclerView + ViewHolder</string>
+    
     <!-- Layout Labels -->
     <string name="unoptimized_layout">LinearLayout lồng nhau (5 cấp)</string>
     <string name="optimized_layout">ConstraintLayout (Flat)</string>
@@ -33,6 +38,8 @@
     <string name="with_merge_layout">Include dùng Merge</string>
     <string name="with_overdraw_layout">Layout có Overdraw</string>
     <string name="no_overdraw_layout">Layout không Overdraw</string>
+    <string name="unoptimized_list_layout">Danh sách không tối ưu</string>
+    <string name="optimized_recyclerview_layout">RecyclerView tối ưu</string>
     
     <!-- Form Fields -->
     <string name="form_title">Thông tin cá nhân</string>
@@ -61,4 +68,11 @@
     <!-- Overdraw Info -->
     <string name="with_overdraw_info">⚠️ Overdraw: 2-3x\nMọi layer đều có background trắng trùng lặp\nPixel bị vẽ nhiều lần - lãng phí GPU!</string>
     <string name="no_overdraw_info">✓ Overdraw: 0-1x\nĐã loại bỏ background thừa bằng @null\nPixel chỉ vẽ 1 lần - tối ưu hiệu suất!</string>
+    
+    <!-- RecyclerView Info -->
+    <string name="unoptimized_list_info">⚠️ Tạo 100 views mới\nTất cả views trong bộ nhớ → Tốn RAM, chậm khởi tạo\nfindViewById() gọi 100 lần → Không hiệu quả!</string>
+    <string name="optimized_recyclerview_info">✓ RecyclerView + ViewHolder pattern\nChỉ tạo ~10 views, tái sử dụng khi scroll\nsetHasFixedSize(true) → Bỏ qua tính toán layout thừa</string>
+    
+    <!-- Person Item -->
+    <string name="avatar_description">Avatar người dùng</string>
 </resources>

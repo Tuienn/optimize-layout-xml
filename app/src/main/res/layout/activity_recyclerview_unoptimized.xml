@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UNOPTIMIZED list approach -->
+<!-- ScrollView + LinearLayout + manually adding views -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Info Header -->
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unoptimized_list_info"
+        android:textSize="12sp"
+        android:textColor="#F44336"
+        android:background="#FFEBEE"
+        android:padding="12dp"
+        android:layout_marginTop="46dp" />
+
+    <!-- ScrollView containing all items -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <!-- Container where items will be added programmatically -->
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+</LinearLayout>

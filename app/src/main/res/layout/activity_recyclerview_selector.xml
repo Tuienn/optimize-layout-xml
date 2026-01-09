@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:id="@+id/tvRecyclerViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recyclerview_optimization"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvRecyclerViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recyclerview_description"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:textAlignment="center"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnUnoptimized"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_unoptimized"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_primary"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnOptimized"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_optimized"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_secondary"
+        android:padding="16dp" />
+
+</LinearLayout>

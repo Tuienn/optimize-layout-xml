@@ -68,6 +68,26 @@ So sánh hiệu suất rendering với overdraw:
   - Overdraw level: 0-1x (tối ưu)
   - Hiệu suất rendering tốt hơn đáng kể
 
+### 4. Tối ưu hóa danh sách với RecyclerView
+
+So sánh hiệu suất với danh sách lớn:
+
+- **Không tối ưu**: Tạo View thủ công cho mỗi item
+
+  - Layout file: `activity_recyclerview_unoptimized.xml`
+  - ScrollView + LinearLayout + addView() cho 100 items
+  - Tất cả views được tạo và giữ trong bộ nhớ
+  - findViewById() gọi lại cho mỗi item → chậm
+  - Risk of OOM với danh sách dài
+
+- **Tối ưu**: RecyclerView với ViewHolder pattern
+  - Layout file: `activity_recyclerview_optimized.xml`
+  - RecyclerView + PersonAdapter + ViewHolder
+  - Chỉ tạo ~10 ViewHolders, tái sử dụng khi scroll
+  - findViewById() chỉ gọi 1 lần cho mỗi ViewHolder
+  - `setHasFixedSize(true)` → bỏ qua tính toán layout thừa
+  - Smooth scrolling, memory efficient
+
 ## Cách sử dụng
 
 1. Mở ứng dụng
@@ -75,10 +95,12 @@ So sánh hiệu suất rendering với overdraw:
    - **"Tối ưu hóa độ sâu"**: So sánh LinearLayout lồng nhau vs ConstraintLayout
    - **"Tối ưu Include/Merge"**: So sánh include thông thường vs include với merge
    - **"Kiểm soát Overdraw"**: So sánh background trùng lặp vs loại bỏ background thừa
+   - **"Tối ưu RecyclerView"**: So sánh tạo View thủ công vs RecyclerView + ViewHolder
 3. Chọn **"Chưa tối ưu"** hoặc **"Tối ưu"** để xem sự khác biệt
 4. Sử dụng các công cụ phân tích:
    - **Layout Inspector**: Xem chi tiết hierarchy
    - **Debug GPU Overdraw**: Settings → Developer Options → Debug GPU Overdraw → Show overdraw areas
+   - **Profiler**: Theo dõi memory usage và scroll performance
 
 ## Mở rộng trong tương lai
 
@@ -89,7 +111,7 @@ optimizations/
 ├── hierarchy/        # ✅ Đã hoàn thành
 ├── merge/            # ✅ Đã hoàn thành
 ├── overdraw/         # ✅ Đã hoàn thành
+├── recyclerview/     # ✅ Đã hoàn thành
 ├── viewstub/         # 🔜 ViewStub lazy loading
-├── recyclerview/     # 🔜 RecyclerView vs ListView
 └── databinding/      # 🔜 Data Binding vs findViewById
 ```
